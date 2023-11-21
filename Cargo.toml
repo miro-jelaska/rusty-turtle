@@ -1,0 +1,41 @@
+[package]
+name = "trunk-template"
+version = "0.1.0"
+edition = "2021"
+description = "Template for starting a Yew project using Trunk"
+readme = "README.md"
+repository = "https://github.com/yewstack/yew-trunk-minimal-template"
+license = "MIT OR Apache-2.0"
+keywords = ["yew", "trunk"]
+categories = ["gui", "wasm", "web-programming"]
+
+#TODO: Explore:
+# - https://docs.rs/thiserror/latest/thiserror/
+# - https://docs.rs/anyhow/latest/anyhow/
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+yew = { version="0.20", features=["csr"] }
+wasm-bindgen = "0.2.87"
+log = "0.4.19"
+console_log = "1.0.0"
+phf = { version = "0.11.2", features = ["macros"] }
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+    'CanvasRenderingContext2d',
+    'Document',
+    'Element',
+    'HtmlCanvasElement',
+    'HtmlElement',
+    'ImageData',
+    'Window',
+    'Path2d',
+    'SvgaElement',
+    'Performance',
+    'RtcDataChannel',
+    'RtcDataChannelEvent',
+    'SvgsvgElement',
+    'KeyboardEvent',
+]
